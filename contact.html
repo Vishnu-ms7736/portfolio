@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Portfolio</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Portfolio</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+
+<!-- CONTACT SECTION -->
+<section class="contact">
+
+  <h2>Let’s Work Together</h2>
+  <p class="sub">Have a project in mind? Send me a message 👇</p>
+
+  <form class="contact-form">
+
+    <!-- NAME -->
+    <div class="input-box">
+      <input type="text" placeholder=" " required>
+      <label>Your Name</label>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="input-box">
+      <input type="email" placeholder=" " required>
+      <label>Your Email</label>
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="input-box">
+      <textarea rows="5" placeholder=" " required></textarea>
+      <label>Your Message</label>
+    </div>
+
+    <!-- BUTTON -->
+    <button type="submit" class="btn">Send Message 🚀</button>
+
+  </form>
+
+    <div class="popup" id="popup">
+        <div class="popup-box">
+            <h3>✅ Message Sent!</h3>
+            <p>Your message has been successfully sent.</p>
+            <button id="closeBtn">OK</button>
+        </div>
+    </div>
+
+</section>
+
+ <!-- FOOTER  -->
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LOGO -->
+    <h2 class="footer-logo">Portfolio</h2>
+
+    <!-- TAGLINE -->
+    <p class="footer-tag">
+      Designing clean and modern digital experiences.
+    </p>
+
+    <!-- LINKS -->
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Skills</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="footer-social">
+      <a href="index.html">🌐</a>
+      <a href="projects.html">💼</a>
+      <a href="contact.html">📧</a>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <p class="footer-copy">
+      © 2026 Your Name • All rights reserved
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+const form = document.querySelector(".contact-form");
+const popup = document.getElementById("popup");
+const closeBtn = document.getElementById("closeBtn");
+
+if(form){
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    popup.classList.add("active");
+    form.reset();
+  });
+}
+
+closeBtn.addEventListener("click", function(){
+  popup.classList.remove("active");
+});
+</script>
+
+
+</body>
+</html>
